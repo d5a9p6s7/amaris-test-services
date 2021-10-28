@@ -1,0 +1,51 @@
+---
+
+spring:
+  config:
+    activate:
+      on-profile: local
+  datasource:
+    url: jdbc:h2:mem:mydb
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    database: default
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    open-in-view: false
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
+  gson:
+    disabled-html-escaping: true
+logging:
+  level:
+    root: INFO
+    ca:
+      casapp: DEBUG
+    com:
+      zaxxer:
+        hikari:
+          HikariConfig: DEBUG
+    org:
+      springframework:
+        web: DEBUG
+        http: DEBUG
+        beans: INFO
+      hibernate: INFO
+server:
+  port: 9090
+springdoc:
+  api-docs:
+    enabled: true
+    path: /api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+  packages-to-scan: com.amaris.test.product.web.controller
+configuration:
+  properties:
+    time-zone: GMT-5
+    date-format: yyyy-MM-dd'T'HH:mm:ss*SSSZZZZ

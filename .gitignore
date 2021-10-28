@@ -1,0 +1,13 @@
+/*.*~
+/.settings
+/.classpath
+/.project
+/.idea/
+/*.iml
+/nb-configuration.xml
+/db/*.*~
+/doc/*.*~
+/libs/*.*~
+/target/
+.factorypath
+.vscode/launch.json
