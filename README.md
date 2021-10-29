@@ -46,7 +46,7 @@ Test project locally :
 ### Git commands
 
     git add .
-    git commit -m "CASAPP-XX [message]"
+    git commit -m "XX [message]"
     git push
     git pull
     git checkout [branchname]
